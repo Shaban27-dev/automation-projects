@@ -9,6 +9,12 @@ and smart CLI tools built for real-world use cases.
 
 ## Projects
 
+### Multi-API Alert Bot
+Monitors live weather conditions and stock market movements across three APIs.
+Sends formatted email alerts with contextual advice and related news headlines
+when thresholds are exceeded. Modular architecture with shared config and error logging.
+→ `multi_api_alert_bot/`
+
 ### Smart Joke Email Automator
 Fetches a random joke from a public API and sends it automatically via email.
 Handles SMTP authentication, formats the message, and delivers with zero manual input.
@@ -24,16 +30,18 @@ every query to a local JSON history file.
 
 ## Stack
 
-Python 3 · Requests · smtplib · python-dotenv · JSON · OpenWeatherMap API
+Python 3 · Requests · smtplib · python-dotenv · JSON · OpenWeatherMap API · Alpha Vantage API · NewsAPI
 
 ## What these projects demonstrate
 
-- REST API integration using `requests` with real-world endpoints
+- Multi-API integration using `requests` with real-world endpoints
 - Secure credential management with `.env` files and `python-dotenv`
 - Email automation via `smtplib` and SMTP authentication
+- Threshold-based alert logic and conditional email triggers
 - Smart assistant logic — condition-based responses and advice
 - Persistent local data storage using JSON read/write cycles
-- Robust error handling — HTTP errors, bad input, network failures
+- Robust error handling — HTTP errors, bad input, network failures, API rate limits
+- Modular project structure with shared config and utility modules
 - Clean CLI design with input validation and formatted output
 
 ---
@@ -44,7 +52,7 @@ Each project folder contains its own `README.md` with setup and run instructions
 All projects require Python 3 and a small set of pip dependencies.
 
 ```bash
-cd weather-api-fetcher
+cd multi_api_alert_bot
 python main.py
 ```
 
