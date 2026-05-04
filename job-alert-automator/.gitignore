@@ -1,0 +1,4 @@
+.env
+credentials.json
+seen_jobs.json
+job_alert.log
